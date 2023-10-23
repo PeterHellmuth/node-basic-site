@@ -22,7 +22,7 @@ const server = http.createServer((req, res) => {
     }
   });
 
-  fs.createReadStream(path.resolve(__dirname, serveHTML)).pipe(res);
+  fs.createReadStream(serveHTML).pipe(res);
 });
 
 server.listen(port, hostname, () => {
